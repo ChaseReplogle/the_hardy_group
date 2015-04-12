@@ -813,7 +813,7 @@ a:hover, a:active, a:focus {
         -ms-transform: rotate(0deg);
             transform: rotate(0deg);
     position: relative;
-    bottom: -10px;
+    bottom: -20px;
     border-bottom: 1px solid black; }
     @media (max-width: 768px) {
       .footer-signup img {

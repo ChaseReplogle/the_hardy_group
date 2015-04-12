@@ -280,7 +280,7 @@ function hardy_group_footer_signup() { ?>
 	<div class="footer-signup">
 		<div class="container large-gutters">
 			<div class="col span_4">
-				<img src="http://thehardygroup.dev/wp-content/uploads/2015/03/cover2-e1427233863428.png" />
+				<img src="/wp-content/uploads/2015/04/Cover-cut2.jpg" />
 			</div>
 			<div class="col span_8 signup-form">
 				<h2 class="text-white">Join the Network for Free!</h2>
