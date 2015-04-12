@@ -1,0 +1,230 @@
+.page-template-page-home {
+
+	#content .nav-main {
+  		-webkit-box-shadow: -1px 13px 37px -12px rgba(0,0,0,0.75);
+		-moz-box-shadow: -1px 13px 37px -12px rgba(0,0,0,0.75);
+		box-shadow: -1px 13px 37px -12px rgba(0,0,0,0.75);
+		position: relative;
+		z-index: 999999999;
+	}
+
+	.post-content {
+		padding: 0px;
+	}
+
+	.image-header {
+		background: url('/wp-content/uploads/2015/04/header.jpg') no-repeat top center;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  position: relative;
+	  overflow: hidden;
+
+
+	  .background-gradient {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
+			background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+		}
+
+	  h3 {
+	  	padding-top: 60px;
+	  	position: relative;
+	  	z-index: 999;
+	  }
+
+	  h2 {
+	  	font-size: 50px;
+	  	line-height: 58px;
+	  	position: relative;
+	  	z-index: 999;
+	  }
+
+	  p {
+	  	position: relative;
+	  	z-index: 999;
+	  	font-size: 16px;
+	  	line-height: 24px;
+	  	font-weight: 100;
+	  	margin-bottom: 30px;
+	  }
+
+	  .button {
+	  	margin-bottom: 100px;
+	  	position: relative;
+	  	z-index: 999;
+	  }
+
+
+	  .iphone {
+	  	position: absolute;
+	  	width: 300px;
+	  	opacity: .95;
+	  	bottom: -140px;
+	  	margin-left: 3%;
+	  	-ms-transform: rotate(-5deg); /* IE 9 */
+    	-webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+    	transform: rotate(-5deg);
+
+    	@media ( max-width : 768px ) {
+			display: none;
+		}
+	  }
+	}
+
+
+	.intro-dick {
+		background: url('/wp-content/uploads/2015/04/background2.jpg') no-repeat top center;
+	  -webkit-background-size: cover;
+	  -moz-background-size: cover;
+	  -o-background-size: cover;
+	  background-size: cover;
+	  position: relative;
+
+	  .container {
+	  	position: relative;
+	  }
+
+	  .background-gradient {
+  			display: none;
+  			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: white;
+			opacity: .5;
+
+	  		@media ( max-width : 768px ) {
+		  		display: block;
+			}
+	  }
+
+		.dick-network {
+			position: relative;
+			width: 65%;
+
+			img {
+				width: 100%;
+				position: absolute;
+				top: -135px;
+				bottom: 0px;
+				left: -4%;
+
+				@media ( max-width : 1130px ) {
+					top: -100px;
+				}
+
+				@media ( max-width : 1000px ) {
+					width: 90%;
+					top: 20px;
+					border-bottom: 1px solid $gray-300;
+				}
+
+				@media ( max-width : 768px ) {
+					display: none;
+				}
+			}
+		}
+
+		.video-link {
+			position: absolute;
+			z-index: 999999999;
+			bottom: 30px;
+			left: 30px;
+			text-decoration: none;
+
+			img {
+				float: left;
+				display: inline;
+				position: relative;
+				top: -10px;
+			}
+
+			a {
+				font-size: 30px;
+				font-family: 'Fjalla One', sans-serif;
+				text-transform: uppercase;
+				text-decoration: none;
+				color: white;
+				margin: 0px 0px 0px 10px;
+			}
+		}
+
+		.dick-text {
+			float: right;
+			padding-top: 120px;
+			padding-left: 3%;
+	  		position: relative;
+	  		z-index: 999;
+
+			@media ( max-width : 1000px ) {
+					padding-top: 40px;
+				}
+
+			h2 {
+				margin-bottom: 4px;
+			}
+
+			p.by_line {
+				color: $gray-200;
+				font-weight: 100;
+			}
+
+			p {
+				z-index: 999;
+	  			font-size: 16px;
+	  			line-height: 24px;
+			}
+
+			a {
+				margin: 30px 0px 100px 0px;
+				display: block;
+				color: $gray-200;
+
+				&:hover {
+					color: $gold;
+				}
+			}
+		}
+	}
+
+
+	.faces {
+		position: relative;
+
+		img {
+			width: 100%;
+			display: block;
+			-webkit-box-shadow: 0px -7px 36px -13px rgba(0,0,0,0.75);
+			-moz-box-shadow: 0px -7px 36px -13px rgba(0,0,0,0.75);
+			box-shadow: 0px -7px 36px -13px rgba(0,0,0,0.75);
+		}
+	}
+
+
+	.home-signup {
+		padding: 60px 0px 80px 0px;
+
+		img {
+			transform: rotate(0deg);
+		}
+
+		.gform_wrapper {
+			margin-top: 60px;
+		}
+	}
+
+	.services {
+	}
+}

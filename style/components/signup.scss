@@ -1,0 +1,49 @@
+.footer-signup {
+	background-image: -o-linear-gradient(-89deg, #555555 0%, #3A3A3A 100%);
+	background-image: -moz-linear-gradient(-89deg, #555555 0%, #3A3A3A 100%);
+	background-image: -ms-linear-gradient(-89deg, #555555 0%, #3A3A3A 100%);
+	background-image: linear-gradient(-179deg, #555555 0%, #3A3A3A 100%);
+	border: 1px solid #0E0E0E;
+	-moz-box-shadow:    inset 0px 1px 29px 0px rgba(0,0,0,0.50);
+	box-shadow:         inset 0px 1px 29px 0px rgba(0,0,0,0.50);
+	padding: 50px 0px 0px 0px;
+	overflow: hidden;
+	position: relative;
+
+	img {
+		width: 100%;
+		padding-top: 0px;
+		transform: rotate(0deg);
+		position: relative;
+		bottom: -10px;
+		border-bottom: 1px solid black;
+
+		@media ( max-width : 768px ) {
+			transform: rotate(0deg);
+			margin-bottom: 30px;
+		}
+	}
+
+	.signup-form {
+		float: right;
+	}
+
+	.gform_wrapper .top_label .gfield_label, .gform_wrapper .field_sublabel_above .ginput_complex label {
+		display: none;
+	}
+
+	h2 {
+		margin-bottom: 5px;
+	}
+
+	h4 {
+		color: $gold;
+		margin-bottom: 30px;
+		margin-top: 10px;
+	}
+
+	input[type=submit] {
+		width: 98% !important;
+		margin-bottom: 30px;
+	}
+}

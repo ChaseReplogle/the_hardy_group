@@ -1,0 +1,48 @@
+.gform_wrapper .top_label input.large, .gform_wrapper .top_label select.large, .gform_wrapper .hidden_label input.large, .gform_wrapper .hidden_label select.large, .gform_wrapper .top_label input.large, .gform_wrapper .top_label select.large, .gform_wrapper .hidden_label input.large, .gform_wrapper .hidden_label select.large, .gform_wrapper li.field_sublabel_above .ginput_complex input[type=text] {
+	padding: 10px;
+	font-weight: 200;
+}
+
+.gform_wrapper form {
+	input[type=text], input[type=url],  input[type=email], input[type=tel],  input[type=number],  input[type=password], textarea {
+		padding: 10px;
+		font-weight: 200;
+	}
+}
+
+.gform_wrapper form .gform_footer {
+	margin: 10px 0px 0px 0px;
+}
+
+
+.gform_wrapper form  {
+	.hidden.gfield, .hidden.gfield input, .hidden.gfield .gfield_label, .hidden.gfield .ginput_container {
+		visibility: hidden;
+		height: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+}
+
+
+.gfield_creditcard_warning_message {
+	display: none;
+}
+
+.gform_wrapper form li.gfield.gfield_creditcard_warning {
+	border: 0px;
+}
+
+.gform_wrapper form select {
+	padding: 11px;
+   -webkit-appearance: none;
+}
+
+.dark-gray-background .gform_wrapper form .ginput_complex label {
+	margin-bottom: 10px;
+}
+
+
+.gform_wrapper form .gform_footer img {
+	display: none;
+}

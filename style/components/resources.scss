@@ -1,0 +1,237 @@
+.resource-row {
+	margin-bottom: 50px;
+}
+
+
+.product-item {
+	padding-top: 25px;
+
+	a {
+		text-decoration: none;
+	}
+
+	h3 {
+		text-align: center;
+	}
+
+	p.subtitle {
+		text-align: center;
+		color: $gray-200;
+		margin-bottom: 20px;
+	}
+
+	.button {
+		border: 1px solid $gray-300;
+		font-size: 14px;
+
+		&:hover {
+			background: $gold;
+			color: white;
+		}
+	}
+
+	img {
+		max-height: 200px;
+		width: auto;
+		display:block;
+   		margin:auto;
+	}
+}
+
+
+
+.review-item {
+
+	a.book-cover {
+		float: left;
+		width: 40%;
+
+		img {
+			border: 1px solid $gray-300;
+			-webkit-box-shadow: 0px 0px 19px 0px rgba(158,158,158,.4);
+			-moz-box-shadow: 0px 0px 19px 0px rgba(158,158,158,.4);
+			box-shadow: 0px 0px 19px 0px rgba(158,158,158,.4);
+		}
+	}
+
+	.by_line {
+		display: block;
+		font-size: 10px;
+	}
+
+	.review-text {
+		float: right;
+		width: 60%;
+		padding-left: 5%;
+	}
+
+	p {
+		font-size: 14px;
+		line-height: 24px;
+		color: $gray-200;
+	}
+
+	h4 {
+		padding: 0px;
+		margin: 0px;
+		margin-bottom: 15px;
+	}
+
+	h3 {
+		padding-top: 0px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+
+}
+
+.resource-row {
+	.columns-2 {
+		margin-top: 40px;
+	}
+
+	ul {
+		li {
+			list-style: none;
+			margin: 0px;
+
+			a {
+				font-size: 20px;
+				margin-bottom: 20px;
+				text-decoration: none;
+				color: $gray-100;
+				display: block;
+
+				&:hover {
+					color: $gold;
+				}
+			}
+		}
+	}
+
+
+	.button {
+		border: 1px solid $gray-300;
+		font-size: 14px;
+		margin-top: 30px;
+
+		&:hover {
+			background: $gold;
+			color: white;
+		}
+	}
+
+}
+
+
+.document-text {
+	h4 {
+		padding-bottom: 0px;
+		margin-bottom: 15px;
+	}
+
+	h3 {
+		padding-top: 0px;
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+#searchform {
+	input {
+		width: 80%;
+		padding: 15px 20px;
+	}
+
+	input[type="submit"] {
+		width: 19%;
+		float: right;
+		padding: 20px;
+		background: $blue;
+		border: 1px solid darken($blue, 10%);
+		box-shadow: none;
+		text-shadow: none;
+		color: white;
+	}
+}
+
+
+
+
+
+.single-product-item {
+	h1 {
+		margin-bottom: 5px;
+		padding-bottom: 5px;
+	}
+
+	h3 {
+		margin: 5px 0px;
+		padding: 5px 0px;
+		margin-bottom: 25px;
+	}
+
+	table {
+		border-top: 1px solid $gray-300;
+		border-left: 1px solid $gray-300;
+		margin-bottom: 10px;
+		background: $gray-500;
+
+		p {
+			margin: 0px;
+			padding: 0px;
+
+			a {
+				color: $blue;
+			}
+		}
+
+		.price-cell {
+			text-align: center;
+		}
+
+		td {
+			border-bottom: 1px solid $gray-300;
+			border-right: 1px solid $gray-300;
+			padding: 15px;
+		}
+	}
+
+	.price {
+		font-weight: 700;
+		font-size: 30px;
+	}
+
+	.button {
+		margin-top: 50px;
+	}
+
+	.also-available {
+		p {
+			color: $gold;
+		}
+	}
+
+	.gform_wrapper {
+		background: $gray-500;
+		padding: 5%;
+		border: 1px solid $gray-300;
+		display: none;
+		margin-top: 30px;
+
+		.price-total {
+			background: white;
+			padding: 30px 0px;
+			text-align: center;
+			border: 1px solid #DFDFDF;
+
+			label {
+				margin: 0px;
+			}
+
+			.ginput_total  {
+				font-size: 2em;
+			}
+		}
+	}
+}

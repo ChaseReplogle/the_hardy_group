@@ -1,0 +1,385 @@
+<?php
+/**
+ * Custom template tags for this theme.
+ *
+ * Eventually, some of the functionality here could be replaced by core features.
+ *
+ * @package hardy_group
+ */
+
+if ( ! function_exists( 'the_posts_navigation' ) ) :
+/**
+ * Display navigation to next/previous set of posts when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ */
+function the_posts_navigation() {
+	// Don't print empty markup if there's only one page.
+	if ( $GLOBALS['wp_query']->max_num_pages < 2 ) {
+		return;
+	}
+	?>
+	<nav class="navigation posts-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Posts navigation', 'hardy_group' ); ?></h2>
+		<div class="nav-links">
+
+			<?php if ( get_next_posts_link() ) : ?>
+			<div class="nav-previous"><?php next_posts_link( __( 'Older posts', 'hardy_group' ) ); ?></div>
+			<?php endif; ?>
+
+			<?php if ( get_previous_posts_link() ) : ?>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts', 'hardy_group' ) ); ?></div>
+			<?php endif; ?>
+
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'the_post_navigation' ) ) :
+/**
+ * Display navigation to next/previous post when applicable.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ */
+function the_post_navigation() {
+	// Don't print empty markup if there's nowhere to navigate.
+	$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
+	$next     = get_adjacent_post( false, '', false );
+
+	if ( ! $next && ! $previous ) {
+		return;
+	}
+	?>
+	<nav class="navigation post-navigation" role="navigation">
+		<h2 class="screen-reader-text"><?php _e( 'Post navigation', 'hardy_group' ); ?></h2>
+		<div class="nav-links">
+			<?php
+				previous_post_link( '<div class="nav-previous">%link</div>', '%title' );
+				next_post_link( '<div class="nav-next">%link</div>', '%title' );
+			?>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	<?php
+}
+endif;
+
+if ( ! function_exists( 'hardy_group_posted_on' ) ) :
+/**
+ * Prints HTML with meta information for the current post-date/time and author.
+ */
+function hardy_group_posted_on() {
+	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+	}
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+
+	$posted_on = sprintf(
+		_x( 'Posted on %s', 'post date', 'hardy_group' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	$byline = sprintf(
+		_x( 'by %s', 'post author', 'hardy_group' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+
+	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+
+}
+endif;
+
+if ( ! function_exists( 'hardy_group_entry_footer' ) ) :
+/**
+ * Prints HTML with meta information for the categories, tags and comments.
+ */
+function hardy_group_entry_footer() {
+	// Hide category and tag text for pages.
+	if ( 'post' == get_post_type() ) {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( __( ', ', 'hardy_group' ) );
+		if ( $categories_list && hardy_group_categorized_blog() ) {
+			printf( '<span class="cat-links">' . __( 'Posted in %1$s', 'hardy_group' ) . '</span>', $categories_list );
+		}
+
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', __( ', ', 'hardy_group' ) );
+		if ( $tags_list ) {
+			printf( '<span class="tags-links">' . __( 'Tagged %1$s', 'hardy_group' ) . '</span>', $tags_list );
+		}
+	}
+
+	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+		echo '<span class="comments-link">';
+		comments_popup_link( __( 'Leave a comment', 'hardy_group' ), __( '1 Comment', 'hardy_group' ), __( '% Comments', 'hardy_group' ) );
+		echo '</span>';
+	}
+
+	edit_post_link( __( 'Edit', 'hardy_group' ), '<span class="edit-link">', '</span>' );
+}
+endif;
+
+if ( ! function_exists( 'the_archive_title' ) ) :
+/**
+ * Shim for `the_archive_title()`.
+ *
+ * Display the archive title based on the queried object.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ *
+ * @param string $before Optional. Content to prepend to the title. Default empty.
+ * @param string $after  Optional. Content to append to the title. Default empty.
+ */
+function the_archive_title( $before = '', $after = '' ) {
+	if ( is_category() ) {
+		$title = sprintf( __( 'Category: %s', 'hardy_group' ), single_cat_title( '', false ) );
+	} elseif ( is_tag() ) {
+		$title = sprintf( __( 'Tag: %s', 'hardy_group' ), single_tag_title( '', false ) );
+	} elseif ( is_author() ) {
+		$title = sprintf( __( 'Author: %s', 'hardy_group' ), '<span class="vcard">' . get_the_author() . '</span>' );
+	} elseif ( is_year() ) {
+		$title = sprintf( __( 'Year: %s', 'hardy_group' ), get_the_date( _x( 'Y', 'yearly archives date format', 'hardy_group' ) ) );
+	} elseif ( is_month() ) {
+		$title = sprintf( __( 'Month: %s', 'hardy_group' ), get_the_date( _x( 'F Y', 'monthly archives date format', 'hardy_group' ) ) );
+	} elseif ( is_day() ) {
+		$title = sprintf( __( 'Day: %s', 'hardy_group' ), get_the_date( _x( 'F j, Y', 'daily archives date format', 'hardy_group' ) ) );
+	} elseif ( is_tax( 'post_format' ) ) {
+		if ( is_tax( 'post_format', 'post-format-aside' ) ) {
+			$title = _x( 'Asides', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) {
+			$title = _x( 'Galleries', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-image' ) ) {
+			$title = _x( 'Images', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-video' ) ) {
+			$title = _x( 'Videos', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-quote' ) ) {
+			$title = _x( 'Quotes', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-link' ) ) {
+			$title = _x( 'Links', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-status' ) ) {
+			$title = _x( 'Statuses', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-audio' ) ) {
+			$title = _x( 'Audio', 'post format archive title', 'hardy_group' );
+		} elseif ( is_tax( 'post_format', 'post-format-chat' ) ) {
+			$title = _x( 'Chats', 'post format archive title', 'hardy_group' );
+		}
+	} elseif ( is_post_type_archive() ) {
+		$title = sprintf( __( 'Archives: %s', 'hardy_group' ), post_type_archive_title( '', false ) );
+	} elseif ( is_tax() ) {
+		$tax = get_taxonomy( get_queried_object()->taxonomy );
+		/* translators: 1: Taxonomy singular name, 2: Current taxonomy term */
+		$title = sprintf( __( '%1$s: %2$s', 'hardy_group' ), $tax->labels->singular_name, single_term_title( '', false ) );
+	} else {
+		$title = __( 'Archives', 'hardy_group' );
+	}
+
+	/**
+	 * Filter the archive title.
+	 *
+	 * @param string $title Archive title to be displayed.
+	 */
+	$title = apply_filters( 'get_the_archive_title', $title );
+
+	if ( ! empty( $title ) ) {
+		echo $before . $title . $after;
+	}
+}
+endif;
+
+if ( ! function_exists( 'the_archive_description' ) ) :
+/**
+ * Shim for `the_archive_description()`.
+ *
+ * Display category, tag, or term description.
+ *
+ * @todo Remove this function when WordPress 4.3 is released.
+ *
+ * @param string $before Optional. Content to prepend to the description. Default empty.
+ * @param string $after  Optional. Content to append to the description. Default empty.
+ */
+function the_archive_description( $before = '', $after = '' ) {
+	$description = apply_filters( 'get_the_archive_description', term_description() );
+
+	if ( ! empty( $description ) ) {
+		/**
+		 * Filter the archive description.
+		 *
+		 * @see term_description()
+		 *
+		 * @param string $description Archive description to be displayed.
+		 */
+		echo $before . $description . $after;
+	}
+}
+endif;
+
+/**
+ * Returns true if a blog has more than 1 category.
+ *
+ * @return bool
+ */
+function hardy_group_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'hardy_group_categories' ) ) ) {
+		// Create an array of all the categories that are attached to posts.
+		$all_the_cool_cats = get_categories( array(
+			'fields'     => 'ids',
+			'hide_empty' => 1,
+
+			// We only need to know if there is more than one category.
+			'number'     => 2,
+		) );
+
+		// Count the number of categories that are attached to the posts.
+		$all_the_cool_cats = count( $all_the_cool_cats );
+
+		set_transient( 'hardy_group_categories', $all_the_cool_cats );
+	}
+
+	if ( $all_the_cool_cats > 1 ) {
+		// This blog has more than 1 category so hardy_group_categorized_blog should return true.
+		return true;
+	} else {
+		// This blog has only 1 category so hardy_group_categorized_blog should return false.
+		return false;
+	}
+}
+
+/**
+ * Flush out the transients used in hardy_group_categorized_blog.
+ */
+function hardy_group_category_transient_flusher() {
+	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+		return;
+	}
+	// Like, beat it. Dig?
+	delete_transient( 'hardy_group_categories' );
+}
+add_action( 'edit_category', 'hardy_group_category_transient_flusher' );
+add_action( 'save_post',     'hardy_group_category_transient_flusher' );
+
+
+
+
+
+
+/**
+ * Returns the footer signup form
+ *
+ *
+ */
+function hardy_group_footer_signup() { ?>
+
+	<div class="footer-signup">
+		<div class="container large-gutters">
+			<div class="col span_4">
+				<img src="http://thehardygroup.dev/wp-content/uploads/2015/03/cover2-e1427233863428.png" />
+			</div>
+			<div class="col span_8 signup-form">
+				<h2 class="text-white">Join the Network for Free!</h2>
+				<h4>Learn what church leaders say they need most.</h4>
+				<?php gravity_form( 1, false, false, false, '', false ); ?>
+			</div>
+		</div>
+	</div>
+
+<?php }
+
+
+
+/**
+ * Returns the endorsement section
+ *
+ *
+ */
+function hardy_group_footer_endorsements() { ?>
+
+<?php
+// WP_Query arguments
+$args = array (
+	'post_type'        		 => 'endorsement',
+	'posts_per_page'         => '1',
+	'meta_key'    => '_thumbnail_id',
+	'orderby'                => 'rand',
+);
+
+// The Query
+$team = new WP_Query( $args );
+
+// The Loop
+if ( $team->have_posts() ) {
+while ( $team->have_posts() ) { $team->the_post(); ?>
+
+
+	<div class="footer-endorsement">
+		<div class="container large-gutters">
+			<div class="col span_4">
+				<?php if ( has_post_thumbnail() ) { the_post_thumbnail('large'); } ?>
+			</div>
+			<div class="col span_8">
+				<h3><?php the_title(); ?></h3>
+				<h4><?php the_field('position'); ?></h4>
+				<?php the_content(); ?>
+				<a href="/about/endorsements/" class="button button--white full-width">More Endorsemetns</a>
+			</div>
+		</div>
+	</div>
+
+<?php  }
+	}
+
+}
+
+
+
+
+
+
+
+/**
+ * Related Endorsements
+ *
+ *
+ */
+function related_endorsements() { ?>
+
+
+<?php $post_objects = get_field('related_endorsements');
+
+if( $post_objects ): ?>
+
+	<div class="light-gray-background">
+			<div class="container gutters row">
+				<div class="col span_12">
+					<h1><?php the_title(); ?> Endorsements</h1>
+
+					<div class="row endorsements">
+
+
+	    					<?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+	       					<?php setup_postdata($post); ?>
+
+							<div class="col span_6 endorsement-item">
+								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('medium'); } ?>
+								<h3><?php echo get_the_title($post->ID); ?></h3>
+								<h4><?php the_field('position', $post->ID); ?></h4>
+								<?php the_content(); ?>
+							</div>
+
+							<?php endforeach; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+<?php endif; ?>
+<?php  }

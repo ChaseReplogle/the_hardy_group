@@ -1,0 +1,108 @@
+.button {
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 30px 75px;
+	border-radius: 5px;
+	border: 1px solid $gray;
+	color: $gray;
+
+	&:hover {
+		opacity: .9;
+	}
+
+	&:visited {
+		color: $gray;
+	}
+
+	@media ( max-width : 768px ) {
+		padding: 30px 20px;
+	}
+}
+
+
+
+	.button__secondary {
+		font-weight: 200;
+		font-size: 16px;
+		text-transform: none;
+	}
+
+
+
+
+	.button--blue {
+		background: $blue;
+		border: 1px solid $blue-dark;
+		color: white;
+
+		&:visited {
+			color: white;
+		}
+
+		&:hover {
+			color: white
+		}
+	}
+
+	.button--gold {
+		background: $gold;
+		border: 1px solid $gold-dark;
+		color: white;
+
+		&:visited {
+			color: white;
+		}
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	.button--white {
+		background: white;
+		color: $gold;
+		border: 1px solid $gold-dark;
+
+		&:visited {
+			color: $gold;
+		}
+
+		&:hover {
+			color: $gold;
+		}
+	}
+
+
+
+
+.gform_wrapper .gform_footer input.button, .gform_wrapper .gform_footer input[type=submit], .gform_wrapper .gform_footer input[type=image] {
+	display: block;
+	width: 100%;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: white;
+	font-weight: 500;
+	font-size: 18px;
+	padding: 30px 75px;
+	border-radius: 5px;
+	border: 1px solid black;
+	color: white;
+	background: $gold;
+	box-shadow: none;
+	text-shadow: none;
+
+	@media ( max-width : 768px ) {
+		padding: 30px 20px;
+	}
+}
+
+
+.button-block {
+	width: 100%;
+	display: block;
+	text-align: center;
+}

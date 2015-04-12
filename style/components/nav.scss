@@ -1,0 +1,172 @@
+.nav-main {
+	background: white;
+	border-bottom: 1px solid $gray-300;
+	padding: 15px 0px;
+
+	.branding {
+
+		@media ( max-width : 768px ) {
+			width: 80%;
+		}
+
+		img {
+			width: 10%;
+			float: left;
+			display: inline-block;
+			margin-right: 18px;
+
+			@media ( max-width : 768px ) {
+				width: 5%;
+			}
+
+			@media ( max-width : 500px ) {
+				width: 10%;
+			}
+		}
+
+		h2 {
+			display: inline-block;
+			margin: 10px 0px 0px 0px;
+			font-weight: 200;
+			font-family: 'Open Sans', sans-serif;
+			text-transform: none;
+			font-size: 24px;
+			color: $gold;
+
+			@media ( max-width : 768px ) {
+				font-size: 16px;
+				margin: 5px 0px;
+			}
+
+			span.secondary {
+				color: $gray-100;
+				font-size: 12px;
+				padding-left: 8px;
+				position: relative;
+				top: -2px;
+
+				@media ( max-width : 1170px ) {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.menu {
+		float: right;
+		margin-top: 6px;
+
+		@media ( max-width : 768px ) {
+			display: none;
+			float: left;
+			width: 100%;
+		}
+
+		.menu-item {
+			display: inline-block;
+			padding-left: 20px;
+
+			@media ( max-width : 768px ) {
+				display: block;
+				width: 100%;
+				border-bottom: 1px solid $gray-400;
+
+				&:last-of-type {
+					border: 0px;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 14px;
+				color: $gray;
+
+				&:hover {
+					color: $gold;
+				}
+
+
+				@media ( max-width : 768px ) {
+					text-align: left;
+					padding: 20px 0px;
+					display: block;
+				}
+			}
+		}
+
+		.current-menu-item, .current_page_ancestor {
+
+			a {
+				color: $gold;
+				font-weight: 600;
+			}
+		}
+	}
+}
+
+
+.nav-sub {
+	background: $gray-400;
+	border-bottom: 1px solid $gray-300;
+	padding: 30px 0px;
+
+	@media ( max-width : 768px ) {
+		display: none;
+	}
+
+	.menu {
+		float: right;
+		text-align: right;
+
+		.menu-item {
+			display: inline-block;
+			padding-left: 20px;
+
+			@media ( max-width : 768px ) {
+				width: 100%;
+				display: block;
+				text-align: left;
+				padding: 10px 20px;
+			}
+
+			a {
+				text-decoration: none;
+				font-size: 14px;
+				color: $gray;
+
+				&:hover {
+					color: $gold;
+				}
+
+				@media ( max-width : 768px ) {
+				}
+			}
+		}
+
+		.current-menu-item {
+
+			a {
+				color: $gold;
+			}
+		}
+	}
+}
+
+
+
+.mobile {
+	display: none;
+
+	@media ( max-width : 768px ) {
+		display: block;
+	}
+
+	a {
+		text-decoration: none;
+		font-size: 13px;
+		float: right;
+		margin-top: 5px;
+		display: inline-block;
+	}
+}
+

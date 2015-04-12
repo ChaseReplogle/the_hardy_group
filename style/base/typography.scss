@@ -1,0 +1,142 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+	outline: 0;
+}
+
+h1 {
+	font-size: 42px;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+h2 {
+	font-size: 36px;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 24px;
+	font-weight: 300;
+	line-height: 35px;
+	margin-bottom: 15px;
+}
+
+h4 {
+	font-size: 20px;
+	font-weight: 300;
+	margin-bottom: 20px;
+	line-height: 30px;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 20px;
+	line-height: 28px;
+}
+
+#main {
+	ul, ol {
+		margin-bottom: 40px;
+	}
+}
+
+.bctt-click-to-tweet {
+	margin: 40px 0px;
+}
+
+.dont-break p {
+	-webkit-column-break-inside:avoid;
+	-moz-column-break-inside:avoid;
+	-o-column-break-inside:avoid;
+	-ms-column-break-inside:avoid;
+	column-break-inside:avoid;
+}
+
+.secondary {
+	font-size: 14px;
+	font-weight: 500;
+	margin-bottom: 15px;
+	line-height: 20px;
+}
+
+.link {
+	font-size: 16px;
+	font-weight: 500;
+	margin-bottom: 15px;
+	line-height: 24px;
+	color: $gray-100;
+}
+
+.link__primary {
+	color: $gold;
+
+	&:hover {
+		color: $gold;
+	}
+}
+
+hr {
+	border: 0px;
+	height: 1px;
+	background: $gray-300;
+	margin: 30px 0px;
+}
+
+
+
+.text-gold {
+	color: $gold;
+}
+
+.text-white {
+	color: white;
+}
+
+.entry-content {
+	h2, h3, h4, h5, h6 {
+		padding-top: 30px;
+	}
+
+	h1 {
+		margin-bottom: 30px;
+		padding: 0px;
+	}
+
+	li {
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: 15px;
+		margin-left: 30px;
+		line-height: 28px;
+	}
+
+	ul li {
+		list-style: disc;
+	}
+
+	ol li {
+		list-style: decimal;
+	}
+}
+
+.columns-2 {
+	h1, h2, h3, h4, h5 {
+		padding-top: 0px;
+	}
+}
+
+a {
+   outline: 0;
+}
+
+a:hover, a:active, a:focus {
+  outline: 0;
+}
+
+.centered {
+	text-align: center;
+}
