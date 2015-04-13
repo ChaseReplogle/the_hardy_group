@@ -43,7 +43,7 @@
 									if( !empty($image) ): ?>
 
 									<div class="col span_3">
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php the_field('url'); ?>" target="_Blank" >
 											<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 										</a>
 									</div>
@@ -54,9 +54,7 @@
 
 
 		</div>
-		<div class="row footer-partners-link">
-			<a href="#" class="secondary link__primary ">Find More Hardy Group Partners</a>
-		</div>
+
 		<div class="row footer-copyright">
 			<p class="secondary">This website and its content is copyright of The Hardy Group - © The Hardy Group 2015. All rights reserved.</p>
 		</div>
