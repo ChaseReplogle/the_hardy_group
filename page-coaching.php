@@ -18,7 +18,7 @@ Template Name: Coaching
 					<div class="col span_12">
 						<h1><?php the_field('full_title'); ?></h1>
 
-						<div class="rwo">
+						<div class="row gutters large-gutter">
 							<div class="consulting-text col span_6">
 								<?php the_content(); ?>
 							</div>
