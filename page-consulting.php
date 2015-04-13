@@ -16,6 +16,7 @@ Template Name: Consulting
 
 				<div class="entry-content container gutters">
 					<div class="col span_12">
+						<h3 class="text-gold">Level 04</h3>
 						<h1><?php the_field('full_title'); ?></h1>
 
 						<div class="row gutters large-gutters">
