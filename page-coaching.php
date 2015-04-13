@@ -25,8 +25,7 @@ Template Name: Coaching
 
 							<div class="consulting-text col span_6">
 									<?php $video_id = get_field('video_id'); ?>
-									<?php if($video_id) { ?><div id="video"><iframe src="https://player.vimeo.com/video/<?php echo $video_id; ?>?title=0&byline=0&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><hr></div><?php } ?>
-									<?php the_content(); ?>
+									<?php if($video_id) { ?><div id="video"><iframe src="https://player.vimeo.com/video/<?php echo $video_id; ?>?title=0&byline=0&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><?php } ?>
 							</div>
 						</div>
 
