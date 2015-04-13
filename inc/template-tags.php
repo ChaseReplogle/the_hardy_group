@@ -279,14 +279,34 @@ function hardy_group_footer_signup() { ?>
 
 	<div class="footer-signup">
 		<div class="container large-gutters">
-			<div class="col span_4">
-				<img src="/wp-content/uploads/2015/04/book.jpg" />
-			</div>
-			<div class="col span_8 signup-form">
-				<h2 class="text-white">Join the Network for Free!</h2>
-				<h4>Learn what church leaders say they need most.</h4>
-				<?php gravity_form( 1, false, false, false, '', false ); ?>
-			</div>
+			<?php
+							// WP_Query arguments
+				$args = array (
+					'post_type'        		 => 'lead_offer',
+					'posts_per_page'         => '1',
+				);
+
+				// The Query
+				$team = new WP_Query( $args );
+
+				// The Loop
+				if ( $team->have_posts() ) {
+				while ( $team->have_posts() ) { $team->the_post(); ?>
+
+					<div class="col span_4">
+						<?php $image = get_field('small_cover_image');
+							if( !empty($image) ): ?>
+							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+						<?php endif; ?>
+					</div>
+					<div class="col span_8 signup-form">
+						<h2 class="text-white"><?php the_field('headline'); ?></h2>
+						<p class="text-gold"><?php the_field('paragraph'); ?></p>
+						<?php gravity_form( 1, false, false, false, '', true ); ?>
+					</div>
+
+				<?php  }
+				} ?>
 		</div>
 	</div>
 
