@@ -276,7 +276,7 @@ function consulting_select( $form ) {
         }
 
         // update 'Select a Post' to whatever you'd like the instructive option to be
-        $field->placeholder = 'Select a Topic';
+        $field->placeholder = 'Select a Consulting Service';
         $field->choices = $choices;
 
     }
