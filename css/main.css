@@ -1639,7 +1639,8 @@ a:hover, a:active, a:focus {
   .page-template-page-home .home-signup img {
     -webkit-transform: rotate(0deg);
         -ms-transform: rotate(0deg);
-            transform: rotate(0deg); }
+            transform: rotate(0deg);
+    box-shadow: -1px 13px 37px -12px rgba(0, 0, 0, 0.75); }
   .page-template-page-home .home-signup .gform_wrapper {
     margin-top: 60px; }
 
