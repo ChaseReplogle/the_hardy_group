@@ -31,10 +31,10 @@ Template Name: Home
 										$rows = get_field('iphone_images');
 										$row_count = count($rows);
 										$i = rand(0, $row_count - 1);
+										$image = $rows[ $i ]['iphone_image'];
+									?>
+									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
-										print_r($rows);?>
-
-									<img src="<?php echo $rows[ $i ]['iphone_image']; ?>"/>
 
 						</div>
 							</div>
