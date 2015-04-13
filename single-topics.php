@@ -32,8 +32,6 @@
 
 							<div class="entry-content container gutters large-gutters">
 								<div class="col span_12">
-									<?php $video_id = get_field('video_id'); ?>
-									<?php if($video_id) { ?><div id="video"><iframe src="https://player.vimeo.com/video/<?php echo $video_id; ?>?title=0&byline=0&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><hr></div><?php } ?>
 									<?php the_content(); ?>
 								</div>
 							</div><!-- .entry-content -->
@@ -41,6 +39,9 @@
 						</article><!-- #post-## -->
 					</div>
 					<div class="col span_6 consulting-contact">
+						<?php $video_id = get_field('video_id'); ?>
+						<?php if($video_id) { ?><div id="video"><iframe src="https://player.vimeo.com/video/<?php echo $video_id; ?>?title=0&byline=0&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><hr></div><?php } ?>
+
 						<div class="form">
 							<h2 class="text-gold"><?php the_title(); ?></h2>
 							<?php if( has_term( '4', 'level' ) ) { ?>
