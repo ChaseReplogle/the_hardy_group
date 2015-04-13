@@ -1676,6 +1676,11 @@ a:hover, a:active, a:focus {
   .page-template-page-home .home-signup .gform_wrapper {
     margin-top: 60px; }
 
+#gform_confirmation_message_1 {
+  padding-top: 100px; }
+  #gform_confirmation_message_1 hr {
+    background: #5A5A5A; }
+
 .search-results .site-main {
   padding-top: 100px;
   padding-bottom: 100px; }
