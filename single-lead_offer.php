@@ -20,6 +20,7 @@
 
 				<div class="col span_9">
 					<?php the_field('thank_you_text'); ?>
+					<a href="<?php the_field('download_file'); ?>" class="button button-bloc button--blue">Download</a>
 				</div>
 			</div><!-- .entry-content -->
 
