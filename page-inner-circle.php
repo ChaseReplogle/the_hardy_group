@@ -34,7 +34,7 @@ Template Name: Inner Circle
 					<div class="light-gray-background gutters">
 						<div class="row registration container">
 							<div class="col span_3 registration-title">
-								<h2>Get Started</h2>
+								<h2><br />Get Started</h2>
 							</div>
 
 							<div class="col span_5">
