@@ -18,8 +18,14 @@ Template Name: Coaching
 					<div class="col span_12">
 						<h1><?php the_field('full_title'); ?></h1>
 
-						<div class="row consulting-text columns-2 dont-break">
-							<?php the_content(); ?>
+						<div class="rwo">
+							<div class="consulting-text col span_6">
+								<?php the_content(); ?>
+							</div>
+
+							<div class="consulting-text col span_6">
+							<?php the_field('video_id'); ?>
+							</div>
 						</div>
 
 
