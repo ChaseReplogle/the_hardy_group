@@ -944,7 +944,11 @@ a:hover, a:active, a:focus {
   margin-bottom: 15px;
   width: 48%;
   float: left;
-  margin-right: 2%; }
+  margin-right: 2%;
+  min-height: 255px; }
+  @media (max-width: 768px) {
+    .topic-item {
+      min-height: auto; } }
   .topic-item:hover {
     background: white; }
   .topic-item a {
