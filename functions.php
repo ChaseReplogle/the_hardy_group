@@ -272,7 +272,7 @@ function consulting_select( $form ) {
 
         foreach ( $posts as $post ) {
         	$cost_amount = get_field( "cost", $post->ID );
-            $choices[] = array( 'text' => $post->post_title . ' - ' . $cost_amount, 'value' => $post->post_title, 'price' => $cost_amount );
+            $choices[] = array( 'text' => $post->post_title, 'value' => $post->post_title, 'price' => $cost_amount );
         }
 
         // update 'Select a Post' to whatever you'd like the instructive option to be
