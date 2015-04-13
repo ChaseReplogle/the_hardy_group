@@ -1100,7 +1100,9 @@ a:hover, a:active, a:focus {
 
 @media (max-width: 768px) {
   .consultant-item {
-    margin-bottom: 40px; } }
+    margin-bottom: 40px; }
+    .consultant-item h3 {
+      padding-top: 10px; } }
 
 .blog_header {
   background: #F6F6F6;
