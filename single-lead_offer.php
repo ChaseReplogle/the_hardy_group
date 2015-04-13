@@ -6,7 +6,7 @@
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
-			<div class="entry-content container gutters large-gutters">
+			<div class="entry-content container gutters large-gutters dark-gray-background">
 
 				<div class="col span_3">
 					<?php $image = get_field('full_cover_image');
@@ -28,6 +28,6 @@
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-	<?php hardy_group_footer_signup(); ?>
+	<?php hardy_group_footer_endorsements(); ?>
 
 <?php get_footer(); ?>
