@@ -19,11 +19,11 @@ Template Name: Coaching
 						<h1><?php the_field('full_title'); ?></h1>
 
 						<div class="row gutters large-gutter">
-							<div class="consulting-text col span_6">
+							<div class="consulting-text col span_5">
 								<?php the_content(); ?>
 							</div>
 
-							<div class="consulting-text col span_6">
+							<div class="consulting-text col span_7">
 									<?php $video_id = get_field('video_id'); ?>
 									<?php if($video_id) { ?><div id="video"><iframe src="https://player.vimeo.com/video/<?php echo $video_id; ?>?title=0&byline=0&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><?php } ?>
 							</div>
