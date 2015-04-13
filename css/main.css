@@ -904,6 +904,9 @@ a:hover, a:active, a:focus {
 
 .page-template-page-consulting .entry-content {
   padding: 80px 20px 10px 20px; }
+  @media (max-width: 768px) {
+    .page-template-page-consulting .entry-content {
+      padding-top: 20px; } }
 
 .gray-background {
   background: #E4E4E4;
@@ -933,6 +936,9 @@ a:hover, a:active, a:focus {
 
 .page-template-page-coaching .entry-content {
   padding: 80px 20px 30px 20px; }
+  @media (max-width: 768px) {
+    .page-template-page-coaching .entry-content {
+      padding-top: 20px; } }
 
 .topics {
   margin-bottom: 40px; }
