@@ -8,7 +8,7 @@
 
 			<div class="entry-content container gutters large-gutters">
 
-				<div class="col span_7">
+				<div class="col span_3">
 					<?php $image = get_field('full_cover_image');
 
 					if( !empty($image) ): ?>
@@ -18,7 +18,7 @@
 					<?php endif; ?>
 				</div>
 
-				<div class="col span_5">
+				<div class="col span_9">
 					<?php the_field('thank_you_text'); ?>
 				</div>
 			</div><!-- .entry-content -->
