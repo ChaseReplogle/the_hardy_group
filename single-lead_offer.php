@@ -18,8 +18,9 @@
 					<?php endif; ?>
 				</div>
 
-				<div class="col span_9">
+				<div class="col span_9 offer-text">
 					<?php the_field('thank_you_text'); ?>
+					<hr />
 					<a href="<?php the_field('download_file'); ?>" class="button button-block button--blue">Download</a>
 				</div>
 			</div><!-- .entry-content -->
