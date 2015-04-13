@@ -83,7 +83,7 @@ Template Name: Home
 					<div class="footer-signup home-signup">
 						<div class="container large-gutters">
 							<div class="col span_4">
-								<img src="/wp-content/uploads/2015/04/Cover1.jpg" />
+								<img src="/wp-content/uploads/2015/04/Cover-021.jpg" />
 							</div>
 							<div class="col span_8 signup-form">
 								<h3 class="text-white">Join the Network for Free!</h3>
