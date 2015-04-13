@@ -49,6 +49,6 @@ $(document).ready(function(){
 
 
 
-$( 'a[href*="#inner-circle-payment"]' ).click(function() {
-	$('#inner-circle-payment').slideDown();
+$( 'a[href*="#home-video"]' ).click(function() {
+	$('#home-video').slideDown();
 });

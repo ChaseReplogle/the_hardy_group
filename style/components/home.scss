@@ -1,5 +1,12 @@
 .page-template-page-home {
 
+
+	.feature-home-video {
+		position: relative;
+		display: none;
+		border-top: 1px solid $gray-200;
+	}
+
 	#content .nav-main {
   		-webkit-box-shadow: -1px 13px 37px -12px rgba(0,0,0,0.75);
 		-moz-box-shadow: -1px 13px 37px -12px rgba(0,0,0,0.75);
@@ -227,4 +234,7 @@
 
 	.services {
 	}
+
+
+
 }

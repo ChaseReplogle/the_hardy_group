@@ -1454,6 +1454,10 @@ a:hover, a:active, a:focus {
       .single-inner-circle-post .video-links ul li a {
         text-decoration: underline; }
 
+.page-template-page-home .feature-home-video {
+  position: relative;
+  display: none;
+  border-top: 1px solid #9B9B9B; }
 .page-template-page-home #content .nav-main {
   box-shadow: -1px 13px 37px -12px rgba(0, 0, 0, 0.75);
   position: relative;

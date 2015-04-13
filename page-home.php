@@ -36,7 +36,7 @@ Template Name: Home
 						<div class="background-gradient"></div>
 						<div class="row container">
 							<div class="video-link">
-								<a href="#">
+								<a href="#home-video">
 									<img src="/wp-content/uploads/2015/04/video-icon.png"/>
 									Dick Hardy
 								</a>
@@ -52,6 +52,16 @@ Template Name: Home
 								<a href="/about/endorsements/">Read Endorsements From The Network</a>
 							</div>
 
+						</div>
+					</div>
+
+					<div class="light-gray-background feature-home-video" id="home-video">
+						<div class="container">
+							<div class="inner-circle-video ">
+								<div class="video-column" id="video">
+									<iframe src="https://player.vimeo.com/video/124791988?title=0&byline=0&portrait=0" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+								</div>
+							</div>
 						</div>
 					</div>
 
