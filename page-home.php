@@ -82,16 +82,37 @@ Template Name: Home
 
 					<div class="footer-signup home-signup">
 						<div class="container large-gutters">
-							<div class="col span_4">
-								<img src="/wp-content/uploads/2015/04/Cover-021.jpg" />
-							</div>
-							<div class="col span_8 signup-form">
-								<h3 class="text-white">Join the Network for Free!</h3>
-								<h2 class="text-white">LEARN WHAT CHURCH LEADERS SAY THEY NEED MOST</h2>
-								<h3 class="text-gold">We recently surveyed over 1,100 pastors and church leaders. We wanted to find out what they say is their greatest need, and the results were strikingly obvious.</h3>
-								<p class="text-white">When you join our free network of pastors leaders, you'll recieve a free download of our guide to what church leaders say they need most.
-								<?php gravity_form( 1, false, false, false, '', true ); ?>
-							</div>
+							<?php
+							// WP_Query arguments
+							$args = array (
+								'post_type'        		 => 'lead_offer',
+								'posts_per_page'         => '1',
+							);
+
+							// The Query
+							$team = new WP_Query( $args );
+
+							// The Loop
+							if ( $team->have_posts() ) {
+							while ( $team->have_posts() ) { $team->the_post(); ?>
+
+								<div class="col span_4">
+									<?php $image = get_field('full_cover_image');
+										if( !empty($image) ): ?>
+										<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+									<?php endif; ?>
+								</div>
+								<div class="col span_8 signup-form">
+									<h3 class="text-white">Join the Network for Free!</h3>
+									<h2 class="text-white"><?php the_field('headline'); ?></h2>
+									<h3 class="text-gold"><?php the_field('sub_headline'); ?></h3>
+									<p class="text-white"><?php the_field('paragraph'); ?></p>
+									<?php gravity_form( 1, false, false, false, '', true ); ?>
+								</div>
+
+							<?php  }
+							} ?>
+
 						</div>
 					</div>
 
