@@ -24,7 +24,8 @@
 
 			<div class="menu col span_8">
 				<ul class="menu">
-					<li class="menu-item"><a href="#"><img src="/wp-content/uploads/2015/04/facebook1.png"  width="20px" /></a></li>
+					<li class="menu-item"><a href="#"><img src="/wp-content/uploads/2015/04/facebook1.png"  width="30px" /></a></li>
+					<li class="menu-item"><a href="#"><img src="/wp-content/uploads/2015/04/twitter.png"  width="30px" /></a></li>
 				</ul>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 1 ) ); ?>
 			</div>
