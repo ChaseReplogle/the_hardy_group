@@ -626,6 +626,11 @@ a:hover, a:active, a:focus {
         opacity: 1; }
     .footer-main .nav-main .menu .current-menu-item a, .footer-main .nav-main .menu .current_page_ancestor a {
       font-weight: 200; }
+  .footer-main .social-icons {
+    position: relative;
+    top: -7px; }
+    .footer-main .social-icons:last-of-type {
+      padding-left: 5px; }
   .footer-main .footer-partners-logos {
     padding: 80px 0px 60px 0px; }
     @media (max-width: 768px) {

@@ -59,6 +59,15 @@
 		}
 	}
 
+	.social-icons {
+		position: relative;
+  		top: -7px;
+
+  		&:last-of-type {
+  			padding-left: 5px;
+  		}
+	}
+
 
 	.footer-partners-logos {
 		padding: 80px 0px 60px 0px;
