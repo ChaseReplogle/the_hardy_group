@@ -300,7 +300,7 @@ function hardy_group_footer_signup() { ?>
 						<?php endif; ?>
 					</div>
 					<div class="col span_8 signup-form">
-						TEST
+						TESTING
 						<h2 class="text-white"><?php the_field('headline'); ?></h2>
 						<p class="text-gold"><?php the_field('paragraph'); ?></p>
 						<?php gravity_form( 1, false, false, false, '', true ); ?>
