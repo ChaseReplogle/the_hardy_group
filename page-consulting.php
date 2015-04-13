@@ -18,8 +18,15 @@ Template Name: Consulting
 					<div class="col span_12">
 						<h1><?php the_field('full_title'); ?></h1>
 
-						<div class="row consulting-text columns-2 dont-break">
-							<?php the_content(); ?>
+						<div class="row gutters large-gutters">
+							<div class="consulting-text col span_5">
+								<?php the_content(); ?>
+							</div>
+
+							<div class="consulting-text col span_7">
+									<?php $video_id = get_field('video_id'); ?>
+									<?php if($video_id) { ?><div id="video"><iframe src="https://player.vimeo.com/video/<?php echo $video_id; ?>?title=0&byline=0&portrait=0" width="1000" height="563" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><?php } ?>
+							</div>
 						</div>
 
 						<div class="row">
