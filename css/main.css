@@ -882,7 +882,8 @@ a:hover, a:active, a:focus {
     padding: 0px;
     line-height: 43px; }
   .service-item p.secondary {
-    color: #9B9B9B; }
+    color: #9B9B9B;
+    font-size: 18px; }
   @media (max-width: 768px) {
     .service-item {
       padding: 15%; } }
