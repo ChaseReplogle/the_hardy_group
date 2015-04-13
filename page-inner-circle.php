@@ -19,7 +19,7 @@ Template Name: Inner Circle
 						<div class="row container">
 
 							<div class="col span_7 video">
-								<div id="video"><iframe src="https://player.vimeo.com/video/105408475?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+								<div id="video"><iframe src="https://player.vimeo.com/video/124844260?title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 							</div>
 
 							<div class="col span_5 header-content">
