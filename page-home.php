@@ -33,6 +33,7 @@ Template Name: Home
 										$i = rand(0, $row_count - 1);
 
 										echo $rows[ $i ]['iphone_image'];
+										print_r($rows);
 
 									?>
 						</div>
