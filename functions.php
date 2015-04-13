@@ -245,3 +245,42 @@ function my_custom_fonts() {
 }
   </style>';
 }
+
+
+
+
+
+
+
+add_filter( 'gform_pre_render_6', 'consulting_select' );
+add_filter( 'gform_pre_validation_6', 'consulting_select' );
+add_filter( 'gform_pre_submission_filter_6', 'consulting_select' );
+add_filter( 'gform_admin_pre_render_6', 'consulting_select' );
+function consulting_select( $form ) {
+
+    foreach ( $form['fields'] as &$field ) {
+
+        if ( strpos( $field->cssClass, 'consulting_select' ) === false ) {
+            continue;
+        }
+
+        // you can add additional parameters here to alter the posts that are retrieved
+        // more info: [http://codex.wordpress.org/Template_Tags/get_posts](http://codex.wordpress.org/Template_Tags/get_posts)
+        $posts = get_posts( 'numberposts=-1&post_status=publish&post_type=topics&level=4' );
+
+        $choices = array();
+
+        foreach ( $posts as $post ) {
+        	$cost_amount = get_field( "cost", $post->ID );
+            $choices[] = array( 'text' => $post->post_title . ' - ' . $cost_amount, 'value' => $post->post_title, 'price' => $cost_amount );
+        }
+
+        // update 'Select a Post' to whatever you'd like the instructive option to be
+        $field->placeholder = 'Select a Topic';
+        $field->choices = $choices;
+
+    }
+
+    return $form;
+}
+
