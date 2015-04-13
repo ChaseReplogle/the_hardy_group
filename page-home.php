@@ -26,7 +26,16 @@ Template Name: Home
 							</div>
 
 							<div class="col span_6 header-content">
-								<div class="iphone"><img src="/wp-content/uploads/2015/04/iphone_011.png"></div>
+								<div class="iphone">
+									<?php
+										$rows = get_field('iphone_images');
+										$row_count = count($rows);
+										$i = rand(0, $row_count - 1);
+
+										echo $rows[ $i ]['iphone_image'];
+
+									?>
+						</div>
 							</div>
 
 						</div>
