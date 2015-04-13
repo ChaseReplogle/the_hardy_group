@@ -430,8 +430,10 @@
 
 	.offer-text {
 		margin-bottom: 20px;
-		padding-bottom: 20px;
-		border-bottom: 1px solid $gray-200;
+
+		hr {
+			background: #5A5A5A;
+		}
 
 		p {
 			color: white;
