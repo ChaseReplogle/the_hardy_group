@@ -32,10 +32,10 @@ Template Name: Home
 										$row_count = count($rows);
 										$i = rand(0, $row_count - 1);
 
-										echo $rows[ $i ]['iphone_image'];
-										print_r($rows);
+										print_r($rows);?>
 
-									?>
+									<img src="<?php echo $rows[ $i ]['iphone_image']; ?>"/>
+
 						</div>
 							</div>
 
