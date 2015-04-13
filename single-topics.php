@@ -53,7 +53,7 @@
 
 							<hr>
 							<?php if( has_term( '4', 'level' ) ) { ?>
-								<?php echo do_shortcode( '[gravityform id="2" title="false" description="true"]' ); ?>
+								<?php echo do_shortcode( '[gravityform id="6" title="false" description="true"]' ); ?>
 							<?php } elseif( has_term( '3', 'level' ) ) { ?>
 								<a href="<?php  the_field('purchase_link'); ?>" target="_Blank" class="button button--blue button-block">Sign Up</a>
 							<?php } ?>
