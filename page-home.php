@@ -20,7 +20,7 @@ Template Name: Home
 
 							<div class="col span_6 ">
 								<h3 class="text-white">Join a network of</h3>
-								<h2 class="text-white">EVERY-DAY PASTORS AND LEADERS FOR ALL THINGS CHURCH</h2>
+								<h2 class="text-white">EVERYDAY PASTORS AND LEADERS FOR ALL THINGS CHURCH</h2>
 								<p class="text-white">The Hardy Group is a network of pastors and leaders striving to lead better in order to expand their influence and make a difference. By being a part of The Hardy Group, you’ll have access to our consulting, coaching, and other resources designed to make you better. </p>
 								<a href="/services/join-the-network/" class="button button--blue">Join the Network</a>
 							</div>
