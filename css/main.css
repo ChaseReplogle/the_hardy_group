@@ -1104,6 +1104,13 @@ a:hover, a:active, a:focus {
     .consultant-item h3 {
       padding-top: 10px; } }
 
+.offer-background {
+  background: #666666;
+  background-image: -webkit-linear-gradient(269deg, #555555 0%, #3A3A3A 100%);
+  background-image: linear-gradient(-179deg, #555555 0%, #3A3A3A 100%);
+  border: 1px solid #0E0E0E;
+  box-shadow: inset 0px 1px 29px 0px rgba(0, 0, 0, 0.5); }
+
 .blog_header {
   background: #F6F6F6;
   border-bottom: 1px solid #E4E4E4;
