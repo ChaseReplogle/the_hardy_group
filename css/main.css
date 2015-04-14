@@ -1321,8 +1321,10 @@ a:hover, a:active, a:focus {
     text-align: center; }
   .single-product-item table td {
     border-bottom: 1px solid #E4E4E4;
-    border-right: 1px solid #E4E4E4;
     padding: 15px; }
+  .single-product-item table .price-cell {
+    border-right: 1px solid #E4E4E4;
+    border-left: 1px solid #E4E4E4; }
 .single-product-item .price {
   font-weight: 700;
   font-size: 30px; }

@@ -24,7 +24,8 @@ Template Name: Endorsements
 							// WP_Query arguments
 							$args = array (
 								'post_type'         => 'endorsement',
-								'order'				=> 'ASC'
+								'order'				=> 'ASC',
+								'posts_per_page'	=> -1,
 							);
 
 							// The Query
