@@ -129,7 +129,7 @@ Template Name: Home
 									<p class="secondary">Level 01</p>
 									<h2 class="text-gold">The Network</h2>
 								</a>
-								<p>The Network consists of a free weekly resource for enhancing your leadership and ministry emailed directly to you.</p>
+								<p><?php the_field('excerpt_line', 30); ?></p>
 							</div>
 
 							<div class="col span_3">
@@ -138,7 +138,7 @@ Template Name: Home
 									<p class="secondary">Level 02</p>
 									<h2 class="text-gold">Inner Circle</h2>
 								</a>
-								<p>The Inner Circle is a members-only online community designed to give church leaders the motivation, training, and resources to lead better.</p>
+								<p><?php the_field('excerpt_line', 32); ?></p>
 							</div>
 
 							<div class="col span_3">
@@ -147,7 +147,7 @@ Template Name: Home
 									<p class="secondary">Level 03</p>
 									<h2 class="text-gold">Coaching</h2>
 								</a>
-								<p>Our personal coaching is designed specifically to help you gain understanding, navigate challenges, and hone your craft to the highest level possible.</p>
+								<p><?php the_field('excerpt_line', 34); ?></p>
 							</div>
 
 							<div class="col span_3">
@@ -156,7 +156,7 @@ Template Name: Home
 									<p class="secondary">Level 04</p>
 									<h2 class="text-gold">Consulting</h2>
 								</a>
-								<p>Our customized consulting provides you personal interaction with our team (including onsite visits) to uniquely help you strengthen your ministry.</p>
+								<p><?php the_field('excerpt_line', 36); ?></p>
 							</div>
 						</div>
 					</div>

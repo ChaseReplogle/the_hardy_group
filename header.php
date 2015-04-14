@@ -62,7 +62,9 @@
     $menu = wp_get_nav_menu_object( $locations[ 'primary' ] ); // 'primary' is our nav menu's name
     $menu_items = wp_get_nav_menu_items( $menu->term_id, array( 'post_parent' => $section_id ) );
 
-    if( !empty( $menu_items ) ) { ?>
+    if( is_search() ) {
+
+    } elseif( !empty( $menu_items ) ) { ?>
 
 		<nav class="nav-sub clear">
 			<div class="container">

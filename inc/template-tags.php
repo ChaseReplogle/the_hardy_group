@@ -300,7 +300,6 @@ function hardy_group_footer_signup() { ?>
 						<?php endif; ?>
 					</div>
 					<div class="col span_8 signup-form">
-						TESTING
 						<h2 class="text-white"><?php the_field('headline'); ?></h2>
 						<p class="text-gold"><?php the_field('paragraph'); ?></p>
 						<?php gravity_form( 1, false, false, false, '', true ); ?>
@@ -388,7 +387,7 @@ if( $post_objects ): ?>
 	       					<?php setup_postdata($post); ?>
 
 							<div class="col span_6 endorsement-item">
-								<?php if ( has_post_thumbnail() ) { the_post_thumbnail('medium'); } ?>
+								<?php if ( has_post_thumbnail($post->ID) ) { echo get_the_post_thumbnail($post->ID, 'medium'); } ?>
 								<h3><?php echo get_the_title($post->ID); ?></h3>
 								<h4><?php the_field('position', $post->ID); ?></h4>
 								<?php the_content(); ?>

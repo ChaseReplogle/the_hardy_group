@@ -92,7 +92,7 @@ Template Name: Inner Circle
 						<div class="container">
 							<div class="inner-circle-video ">
 								<h2>We've listened!</h2>
-								<h3 class="text-gold">The Inner Cirlce was created with the input of over 600 church leaders.</h3>
+								<h3 class="text-gold">Learn how the Inner Circle was developed and the heart behind this online resource.</h3>
 								<div class="video-column" id="video">
 									<iframe src="https://player.vimeo.com/video/120633625?title=0&byline=0&portrait=0" width="1000" height="562" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 								</div>
@@ -116,7 +116,6 @@ Template Name: Inner Circle
 								<div class="price-box">
 									<h5>Introductory Offer</h5>
 									<h2>$<?php the_field('cost'); ?></h2>
-									<h5>Price Based on Topic Selection</h5>
 									<a href="https://en225.infusionsoft.com/app/storeFront/showProductDetail?productId=3"  target="_Blank" class="button button--white button-block">Join the Circle</a>
 								</div>
 							</div>
@@ -129,7 +128,7 @@ Template Name: Inner Circle
 
 							<div class="col span_9">
 								<h2 class="text-gold">Free Bonus</h2>
-								<p class="text-white">When you sign up you'll also receive a digital copy of 27 Tough Questions Pastors Ask, helping discuss the 30 navigational decisions leading pastors make in growing the church.</p>
+								<p class="text-white">When you sign up you'll also receive a digital copy of 27 Tough Questions Pastors Ask, answering some of the toughest challenges church leaders face in ministry.</p>
 							</div>
 
 						</div>

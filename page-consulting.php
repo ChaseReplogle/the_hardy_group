@@ -163,7 +163,7 @@ Template Name: Consulting
 					<div class="consulting-call-to-action row gutters">
 						<div class="col span_7">
 							<h2>Let's Talk.</h2>
-							<p>Every consulting service begins with a simple converstation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam imperdiet condimentum urna, eu posuere velit interdum nec.</p>
+							<p> Every consulting service begins with a simple conversation. Let’s get started by talking about whether The Hardy Group Consulting is right for you.</p>
 						</div>
 						<div class="col span_5">
 							<a href="/contact" class="button button--blue button-block">Get Started</a>

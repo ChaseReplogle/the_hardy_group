@@ -412,6 +412,9 @@ a:hover, a:active, a:focus {
 .gform_wrapper form .gform_footer img {
   display: none; }
 
+.home .gform_wrapper div.validation_error {
+  color: white; }
+
 .button {
   display: inline-block;
   text-transform: uppercase;
@@ -1066,14 +1069,28 @@ a:hover, a:active, a:focus {
     float: left;
     width: 15%;
     padding: 0px 50px 30px 0px; }
+    @media (max-width: 768px) {
+      .single-topics .consulting-text-header img {
+        width: 70%;
+        margin: 0px 25%; } }
   .single-topics .consulting-text-header h3 {
     display: inline-block;
     padding-top: 0px;
     margin-top: 10px;
     margin-bottom: 0px; }
+    @media (max-width: 768px) {
+      .single-topics .consulting-text-header h3 {
+        text-align: center;
+        width: 100%;
+        display: block; } }
   .single-topics .consulting-text-header h1 {
     display: inline;
     line-height: 50px; }
+    @media (max-width: 768px) {
+      .single-topics .consulting-text-header h1 {
+        text-align: center;
+        width: 100%;
+        display: block; } }
 .single-topics .entry-content {
   padding: 0px 0px 100px 0px; }
 .single-topics .consulting-contact {
@@ -1360,7 +1377,7 @@ a:hover, a:active, a:focus {
     .page-template-page-inner-circle .image-header .header-content .logo, .single-inner-circle-post .image-header .header-content .logo {
       background: white;
       margin-top: 40px;
-      margin-left: -80px;
+      margin-left: -40px;
       z-index: 99999;
       position: relative;
       padding: 10%;
@@ -1519,6 +1536,9 @@ a:hover, a:active, a:focus {
   position: relative;
   display: none;
   border-top: 1px solid #9B9B9B; }
+  @media (max-width: 768px) {
+    .page-template-page-home .feature-home-video {
+      display: block; } }
 .page-template-page-home #content .nav-main {
   box-shadow: -1px 13px 37px -12px rgba(0, 0, 0, 0.75);
   position: relative;
